@@ -5,6 +5,8 @@ const botonesOperadores = document.querySelectorAll('.operator');
 const igual = document.getElementById('igual');
 const reset = document.getElementById('ac');
 let memoria;
+let memoria1;
+
 
 
 // toma el valor del boton numero con un evento    
@@ -40,9 +42,15 @@ for (let operador of botonesOperadores){
 //muestra en pantalla el operador al precionar la tecla
 window.addEventListener('keydown', function (e) {
     let tecla = e.key;
-    if(tecla == '+' || tecla ==  '-' || tecla == '*' || tecla == '/'){
+    if(displayValorActual.innerHTML === ''){
+        return;
+    }
+    else if(tecla == '+' || tecla ==  '-' || tecla == '/'){
         operator(tecla);
         
+    }
+    else if (tecla == '*'){
+        operator('x');
     }
     
 });
@@ -90,11 +98,14 @@ function addCurrentNumber (num){
 
     if (displayValorActual.innerHTML.length <12){
         displayValorActual.innerHTML = displayValorActual.innerHTML + num;
+        
 
     }
 }
 else if (displayValorAnterior.innerHTML.slice(0, -1) === displayValorActual.innerHTML) {
    displayValorActual.innerHTML = num;
+   memoria = num;
+
 
 }
 else {
@@ -110,41 +121,72 @@ function operator (op){
         displayValorAnterior.innerHTML = '';
         return;
     }
+    
 displayValorAnterior.innerHTML = displayValorActual.innerHTML + op;
+
 
 
 }
 
 function calcular(){
+
     let op;
     let resultado;
     for (let char of displayValorAnterior.innerHTML){
         if (char === '+' || char === '-' || char === 'x' || char === '/'){
             op = char;
         }
-        else if (char === '='){
-
-        }
+       
 
     }
+    for (let char of displayValorAnterior.innerHTML){
+        if (char === '='){
+            resultado = operaciones(parseInt(displayValorActual.innerHTML),parseInt(memoria),op);
+            displayValorAnterior.innerHTML = memoria1 + op + memoria + '=';
+    displayValorActual.innerHTML = resultado;
+    memoria1 = resultado;
     
-    switch (op){
-        case '+':
-           resultado = parseInt(displayValorAnterior.innerHTML.slice(0, -1)) + parseInt(displayValorActual.innerHTML);
-           break;
-        case 'x':
-            resultado = parseInt(displayValorAnterior.innerHTML.slice(0, -1)) * parseInt(displayValorActual.innerHTML);
-            break;
-        case '-':
-            resultado = parseInt(displayValorAnterior.innerHTML.slice(0, -1)) - parseInt(displayValorActual.innerHTML);
-            break;
-        case '/':
-            resultado = parseInt(displayValorAnterior.innerHTML.slice(0, -1)) / parseInt(displayValorActual.innerHTML);
-            break;    
+
+            return;
+        }
+       
+
     }
+
+
+     
+    
+    resultado = operaciones(parseInt(displayValorAnterior.innerHTML.slice(0, -1)), parseInt(displayValorActual.innerHTML), op);
+    memoria1 = resultado;
+   
 
     displayValorAnterior.innerHTML = displayValorAnterior.innerHTML + displayValorActual.innerHTML + '=';
     displayValorActual.innerHTML = resultado;
 
+
+}
+
+function operaciones (num1, num2, op){
+    let resultado;
+    console.log(num1);
+    console.log(num2);
+    console.log(op);
+
+    switch (op){
+        case '+':
+           resultado = num1 + num2;
+           break;
+        case 'x':
+            resultado = num1 * num2;
+            break;
+        case '-':
+            resultado = num1 - num2;
+            break;
+        case '/':
+            resultado = num1 / num2;
+            break;    
+    }
+    console.log(resultado);
+return resultado;
 
 }
