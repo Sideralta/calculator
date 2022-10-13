@@ -91,6 +91,11 @@ font-family: 'Roboto', sans-serif;
 
     }
 
+    #igual{
+        color: #3C4857;
+        font-size: 52px;
+    }
+
     @media (min-width: 416px){
         button:hover{
             cursor: pointer;
