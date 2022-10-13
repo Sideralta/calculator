@@ -141,7 +141,7 @@ function calcular(){
     }
     for (let char of displayValorAnterior.innerHTML){
         if (char === '='){
-            resultado = operaciones(parseInt(displayValorActual.innerHTML),parseInt(memoria),op);
+            resultado = operaciones(parseFloat(displayValorActual.innerHTML),parseFloat(memoria),op);
             displayValorAnterior.innerHTML = memoria1 + op + memoria + '=';
     displayValorActual.innerHTML = resultado;
     memoria1 = resultado;
@@ -156,7 +156,7 @@ function calcular(){
 
      
     
-    resultado = operaciones(parseInt(displayValorAnterior.innerHTML.slice(0, -1)), parseInt(displayValorActual.innerHTML), op);
+    resultado = operaciones(parseFloat(displayValorAnterior.innerHTML.slice(0, -1)), parseFloat(displayValorActual.innerHTML), op);
     memoria1 = resultado;
    
 
