@@ -68,10 +68,7 @@ font-family: 'Roboto', sans-serif;
         margin: 1px;
     }
 
-    button:hover{
-        cursor: pointer;
-        opacity: 0.2;
-    }
+    
 
     #col2-mas{
         grid-row: span 2;
@@ -94,6 +91,19 @@ font-family: 'Roboto', sans-serif;
 
     }
 
-    
+    @media (min-width: 416px){
+        button:hover{
+            cursor: pointer;
+            opacity: 0.2;
+        }
 
-    
+    }
+
+    @media (max-width: 415px){
+        
+        button:active{
+            cursor: pointer;
+        opacity: 0.2;
+        }
+
+    }
