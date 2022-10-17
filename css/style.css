@@ -13,7 +13,7 @@ font-family: 'Roboto', sans-serif;
     
 }
 
-#calc-box {
+.calc-box {
     width: 380px;
     height: 510px;
     background-color:lightgrey;
@@ -21,8 +21,18 @@ font-family: 'Roboto', sans-serif;
     align-items: center;
     justify-content: center;
     }
+/* Clase de otra skin */
+.calc-box2{
+    width: 380px;
+    height: 510px;
+    background-color: #00b4d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    #calc {
+}
+
+    .calc {
         width: 342px;
         height: 478px;
         background-color: #3A4655;
@@ -31,6 +41,16 @@ font-family: 'Roboto', sans-serif;
         grid-template-rows: 90px repeat(5, 1fr);
         padding: 2px;
 
+    }
+/*otra skin*/
+    .calc2 {
+        width: 342px;
+        height: 478px;
+        background-color: #023e8a;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 90px repeat(5, 1fr);
+        padding: 2px;
     }
 
     #screen {
@@ -42,7 +62,7 @@ font-family: 'Roboto', sans-serif;
         grid-template-rows: 40px 1fr;
 
     }
-    #memory{
+    .memory{
         border-bottom-style: solid;
         border-color: #727B86;
         display: flex;
@@ -50,6 +70,17 @@ font-family: 'Roboto', sans-serif;
         align-items: center;
         font-size: 20px;
         color: #727B86;
+    }
+
+    .memory2{
+        border-bottom-style: solid;
+        border-color: #0077b6;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        font-size: 20px;
+        color: #0077b6;
+
     }
 
     #result{
@@ -60,12 +91,21 @@ font-family: 'Roboto', sans-serif;
         color: #FFFFFF;
     }
 
-    button {
+    .btn {
         background-color: rgba(114, 123, 134, 0.55);
        /*  width: 82px;
         height: 72px; */
         border-style: none;
         margin: 1px;
+    }
+
+    .btn2{
+        background-color:rgba(0, 119, 182, 0.55);
+       /*  width: 82px;
+        height: 72px; */
+        border-style: none;
+        margin: 1px;
+
     }
 
     
@@ -90,16 +130,56 @@ font-family: 'Roboto', sans-serif;
         font-size: 52px;
 
     }
+    
+.te{
+    color: #3C4857;
+
+}
+
+.te2{
+    color: #caf0f8;
+
+}
+
+    .operator2{
+        color: #caf0f8;
+        font-size: 52px;
+    }
 
     #igual{
         color: #3C4857;
         font-size: 52px;
     }
 
+    #skin-button button{
+        background-color: #3a4655;
+        margin-top: 20px;
+        width: 100px;
+        height: 50px;
+        color: #d0d8dc;
+        font-size: 40px;
+        border-radius: 5px;
+        box-shadow: 5px ;
+    }
+
+    #skin-button button:hover {
+        cursor: pointer;
+        opacity: 0.2;
+        box-shadow: 0px;
+
+    }
+
+
     @media (min-width: 416px){
         button:hover{
             cursor: pointer;
             opacity: 0.2;
+        }
+        #skin-button button:hover {
+            cursor: pointer;
+            opacity: 0.2;
+            box-shadow: 0px;
+    
         }
 
     }
@@ -109,6 +189,12 @@ font-family: 'Roboto', sans-serif;
         button:active{
             cursor: pointer;
         opacity: 0.2;
+        }
+        #skin-button button:hover {
+            cursor: pointer;
+            opacity: 0.2;
+            box-shadow: 0px;
+    
         }
 
     }
