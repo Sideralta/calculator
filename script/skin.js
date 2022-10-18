@@ -1,28 +1,150 @@
-let skin = document.getElementById('skin');
+const bluebtn = document.getElementById('bluebtn');
+const greybtn = document.getElementById('greybtn');
+const orangebtn = document.getElementById('orangebtn');
+/* const num = document.querySelector('.number'); */
 const calcBox = document.querySelector('.calc-box');
 const calc = document.querySelector('.calc');
 const btn =  document.querySelectorAll('.btn');
 const memory = document.querySelector('.memory');
 const operador = document.querySelectorAll('.operator');
+const te = document.querySelector('.te');
 
 
-skin.addEventListener('click', function(){
-   
-    calcBox.classList.toggle("calc-box2");
-    calc.classList.toggle("calc2");
-    memory.classList.toggle("memory2");
+// change to blue skin
+bluebtn.addEventListener('click', function(){
 
-    operador.forEach(op => {
-        op.classList.toggle("operator2");
-
+    if (calcBox.classList.contains('calc-box')) {
+        calcBox.classList.replace("calc-box","calc-box2");
+        calc.classList.replace("calc","calc2");
+        memory.classList.replace("memory","memory2");
+       /*  num.classList.replace("number","numer2"); */
+       
+    
+        operador.forEach(op => {
+            op.classList.replace("operator","operator2");
+    
+            
+        });
+       
+    
+        btn.forEach(btn => {
+            btn.classList.replace("btn","btn2");
+            
+        });
         
-    });
-   
 
-    btn.forEach(btn => {
-        btn.classList.toggle("btn2");
-        
-    });
+    }
+
+    else if (calcBox.classList.contains('calc-box3')){
+        calcBox.classList.replace("calc-box3","calc-box2");
+        calc.classList.replace("calc3","calc2");
+        memory.classList.replace("memory3","memory2");
+       
+    
+        operador.forEach(op => {
+            op.classList.replace("operator3","operator2");
+    
+            
+        });
+       
+    
+        btn.forEach(btn => {
+            btn.classList.replace("btn3","btn2");
+            
+        });
+
+    }
+   
+   
+  
+   
+});
+
+// change to grey skin
+greybtn.addEventListener('click', function(){
+
+    if (calcBox.classList.contains('calc-box2')){
+        calcBox.classList.replace("calc-box2","calc-box");
+        calc.classList.replace("calc2","calc");
+        memory.classList.replace("memory2","memory");
+    
+        operador.forEach(op => {
+            op.classList.replace("operator2","operator");
+    
+            
+        });
+       
+    
+        btn.forEach(btn => {
+            btn.classList.replace("btn2","btn");
+            
+        });
+
+    }
+   
+    else if (calcBox.classList.contains('calc-box3')){
+        calcBox.classList.replace("calc-box3","calc-box");
+        calc.classList.replace("calc3","calc");
+        memory.classList.replace("memory3","memory");
+    
+        operador.forEach(op => {
+            op.classList.replace("operator3","operator");
+    
+            
+        });
+       
+    
+        btn.forEach(btn => {
+            btn.classList.replace("btn3","btn");
+            
+        });
+
+    }
+   
+    
+   
+});
+// change to orange skin
+orangebtn.addEventListener('click', function(){
+
+    if (calcBox.classList.contains('calc-box2')){
+        calcBox.classList.replace("calc-box2","calc-box3");
+        calc.classList.replace("calc2","calc3");
+        memory.classList.replace("memory2","memory3");
+    
+        operador.forEach(op => {
+            op.classList.replace("operator2","operator3");
+    
+            
+        });
+       
+    
+        btn.forEach(btn => {
+            btn.classList.replace("btn2","btn3");
+            
+        });
+
+    }
+   
+    else if (calcBox.classList.contains('calc-box')){
+        calcBox.classList.replace("calc-box","calc-box3");
+        calc.classList.replace("calc","calc3");
+        memory.classList.replace("memory","memory3");
+    
+        operador.forEach(op => {
+            op.classList.replace("operator","operator3");
+    
+            
+        });
+       
+    
+        btn.forEach(btn => {
+            btn.classList.replace("btn","btn3");
+            
+        });
+
+    }
+   
     
    
 });

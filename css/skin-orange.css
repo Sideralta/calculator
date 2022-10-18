@@ -1,0 +1,32 @@
+.calc-box3{
+    width: 380px;
+    height: 510px;
+    background-color: #ffb627;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.calc3 {
+    width: 342px;
+    height: 478px;
+    background-color: #cc5803;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 90px repeat(5, 1fr);
+    padding: 2px;
+}
+
+.operator3{
+    color: #ffc971;
+    font-size: 52px;
+}
+
+.btn3{
+   background-color: #ff9505;
+    border-style: none;
+    margin: 1px;
+
+}
+

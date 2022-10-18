@@ -21,16 +21,6 @@ font-family: 'Roboto', sans-serif;
     align-items: center;
     justify-content: center;
     }
-/* Clase de otra skin */
-.calc-box2{
-    width: 380px;
-    height: 510px;
-    background-color: #00b4d8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
 
     .calc {
         width: 342px;
@@ -42,16 +32,7 @@ font-family: 'Roboto', sans-serif;
         padding: 2px;
 
     }
-/*otra skin*/
-    .calc2 {
-        width: 342px;
-        height: 478px;
-        background-color: #023e8a;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 90px repeat(5, 1fr);
-        padding: 2px;
-    }
+
 
     #screen {
 
@@ -93,22 +74,9 @@ font-family: 'Roboto', sans-serif;
 
     .btn {
         background-color: rgba(114, 123, 134, 0.55);
-       /*  width: 82px;
-        height: 72px; */
         border-style: none;
         margin: 1px;
     }
-
-    .btn2{
-        background-color:rgba(0, 119, 182, 0.55);
-       /*  width: 82px;
-        height: 72px; */
-        border-style: none;
-        margin: 1px;
-
-    }
-
-    
 
     #col2-mas{
         grid-row: span 2;
@@ -131,30 +99,36 @@ font-family: 'Roboto', sans-serif;
 
     }
     
-.te{
-    color: #3C4857;
-
-}
-
-.te2{
-    color: #caf0f8;
-
-}
-
-    .operator2{
-        color: #caf0f8;
-        font-size: 52px;
-    }
 
     #igual{
         color: #3C4857;
         font-size: 52px;
     }
 
-    #skin-button button{
-        background-color: #3a4655;
+    #bluebtn{
+        background-color: #0077b6;
         margin-top: 20px;
-        width: 100px;
+        width: 150px;
+        height: 50px;
+        color: #d0d8dc;
+        font-size: 40px;
+        border-radius: 5px;
+        box-shadow: 5px ;
+    }
+    #greybtn{
+        background-color: #3C4857;
+        margin-top: 20px;
+        width: 150px;
+        height: 50px;
+        color: #d0d8dc;
+        font-size: 40px;
+        border-radius: 5px;
+        box-shadow: 5px ;
+    }
+    #orangebtn{
+        background-color: #ff8500;
+        margin-top: 20px;
+        width: 150px;
         height: 50px;
         color: #d0d8dc;
         font-size: 40px;
