@@ -1,3 +1,4 @@
+const igualbtn = document.querySelector('.igual-btn');
 const bluebtn = document.getElementById('bluebtn');
 const greybtn = document.getElementById('greybtn');
 const orangebtn = document.getElementById('orangebtn');
@@ -7,7 +8,7 @@ const calc = document.querySelector('.calc');
 const btn =  document.querySelectorAll('.btn');
 const memory = document.querySelector('.memory');
 const operador = document.querySelectorAll('.operator');
-const te = document.querySelector('.te');
+
 
 
 // change to blue skin
@@ -17,7 +18,7 @@ bluebtn.addEventListener('click', function(){
         calcBox.classList.replace("calc-box","calc-box2");
         calc.classList.replace("calc","calc2");
         memory.classList.replace("memory","memory2");
-       /*  num.classList.replace("number","numer2"); */
+       igualbtn.classList.replace("igual-btn", "igual-btn2");
        
     
         operador.forEach(op => {
@@ -39,6 +40,7 @@ bluebtn.addEventListener('click', function(){
         calcBox.classList.replace("calc-box3","calc-box2");
         calc.classList.replace("calc3","calc2");
         memory.classList.replace("memory3","memory2");
+        igualbtn.classList.replace("igual-btn3", "igual-btn2");
        
     
         operador.forEach(op => {
@@ -67,6 +69,7 @@ greybtn.addEventListener('click', function(){
         calcBox.classList.replace("calc-box2","calc-box");
         calc.classList.replace("calc2","calc");
         memory.classList.replace("memory2","memory");
+        igualbtn.classList.replace("igual-btn2", "igual-btn");
     
         operador.forEach(op => {
             op.classList.replace("operator2","operator");
@@ -86,6 +89,7 @@ greybtn.addEventListener('click', function(){
         calcBox.classList.replace("calc-box3","calc-box");
         calc.classList.replace("calc3","calc");
         memory.classList.replace("memory3","memory");
+        igualbtn.classList.replace("igual-btn3", "igual-btn");
     
         operador.forEach(op => {
             op.classList.replace("operator3","operator");
@@ -111,6 +115,7 @@ orangebtn.addEventListener('click', function(){
         calcBox.classList.replace("calc-box2","calc-box3");
         calc.classList.replace("calc2","calc3");
         memory.classList.replace("memory2","memory3");
+        igualbtn.classList.replace("igual-btn2", "igual-btn3");
     
         operador.forEach(op => {
             op.classList.replace("operator2","operator3");
@@ -130,6 +135,7 @@ orangebtn.addEventListener('click', function(){
         calcBox.classList.replace("calc-box","calc-box3");
         calc.classList.replace("calc","calc3");
         memory.classList.replace("memory","memory3");
+        igualbtn.classList.replace("igual-btn", "igual-btn3");
     
         operador.forEach(op => {
             op.classList.replace("operator","operator3");
